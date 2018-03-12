@@ -1,5 +1,5 @@
 require 'rbconfig'
-class Go-Pixeldrain < Formula
+class Pixeldrain < Formula
   desc "Pixeldrain client"
   homepage "https://github.com/jkawamoto/go-pixeldrain"
   version "0.1.0"
@@ -37,11 +37,11 @@ class Go-Pixeldrain < Formula
   end
 
   def install
-    bin.install "go-pixeldrain"
+    bin.install "pd"
   end
 
   test do
-    system "go-pixeldrain"
+    system "pd"
   end
 
 end
