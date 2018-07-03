@@ -2,18 +2,18 @@ require 'rbconfig'
 class Pixeldrain < Formula
   desc "Pixeldrain client"
   homepage "https://github.com/jkawamoto/go-pixeldrain"
-  version "0.1.1"
+  version "0.2.0"
 
   if Hardware::CPU.is_64_bit?
     case RbConfig::CONFIG['host_os']
     when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
       :windows
     when /darwin|mac os/
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.1.1/pd_0.1.1_darwin_amd64.zip"
-      sha256 "bc0627707aae5ad5f62da5c891646980d0924eaab6285f48cb787591a5cbcdb3"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/0.2.0/pd_v0.2.0_darwin_amd64.zip"
+      sha256 "a23ed774e1b359a602af71b84c7a452c6a5f4c8f9d33c0584e938ef1b544e334"
     when /linux/
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.1.1/pd_0.1.1_linux_amd64.tar.gz"
-      sha256 "f1549ae54e79d58e2c6f267ee83c30bcb688a27779ad2cc4456f799262bba1a7"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/0.2.0/pd_v0.2.0_linux_amd64.tar.gz"
+      sha256 "62b0acdd1c5e3158f6cd12d7c41df46db4e081cb5db0a20f0df391cac9d53356"
     when /solaris|bsd/
       :unix
     else
@@ -24,11 +24,11 @@ class Pixeldrain < Formula
     when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
       :windows
     when /darwin|mac os/
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.1.1/pd_0.1.1_darwin_386.zip"
-      sha256 "8559eda56a45ad5ff8e0e59186793be8f672db8d68a38f7190c6f727636745eb"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/0.2.0/pd_v0.2.0_darwin_386.zip"
+      sha256 "7bbeaf335477a54bb2dbbd9ba97785fd51f448b7bea6439e8aa2c9168f8d08a5"
     when /linux/
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.1.1/pd_0.1.1_linux_386.tar.gz"
-      sha256 "2c432bd217fcac24b2e2486e0adbc19283cd27484b33dba621e89d629aeabe7d"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/0.2.0/pd_v0.2.0_linux_386.tar.gz"
+      sha256 "bdf826ac7aacc0d57b5163ec0e2ec190dbab5e4f169e55c1f20eeed6c153f0b2"
     when /solaris|bsd/
       :unix
     else
