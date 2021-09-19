@@ -5,29 +5,29 @@
 class Pixeldrain < Formula
   desc "Share files with decentralized cloud storage."
   homepage "https://jkawamoto.github.io/go-pixeldrain/"
-  version "0.4.1"
+  version "0.4.2"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.4.1/pd_0.4.1_darwin_amd64.tar.gz"
-      sha256 "1e1dfb04eaa820663f3be2666b9da9b1771a451fc74535fa47b8518892200f10"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.4.2/pd_0.4.2_darwin_amd64.tar.gz"
+      sha256 "cce26d93bf6b808f63ef72c74489b91e026f15b476f4450d18e83dd42933d341"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.4.1/pd_0.4.1_darwin_arm64.tar.gz"
-      sha256 "131dffc6e7fa7912d62c810e2335bafaad7e5263d549f449e596868af9ed7da0"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.4.2/pd_0.4.2_darwin_arm64.tar.gz"
+      sha256 "4a9cff93dd62328e356da26ca1b65eaaf6ffb4e43fb3e5badd2c0863cb922a46"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.4.1/pd_0.4.1_linux_amd64.tar.gz"
-      sha256 "22ebfef9fbaf1326cbe4b4c02ecece8b772f06ab6ef30f2d901976dd72fe87d3"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.4.2/pd_0.4.2_linux_amd64.tar.gz"
+      sha256 "49075aa94cc404675256c17463758208ce2361c0f801d016e2f5f65abb6cc00c"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.4.1/pd_0.4.1_linux_arm64.tar.gz"
-      sha256 "784123e7ce03545f40256c2ee780c33497568a13499402599384cf0c1cb31fa6"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.4.2/pd_0.4.2_linux_arm64.tar.gz"
+      sha256 "94d158f1c034526a73f2509f95d1d384cac756077c21f4c5d0135c771c4547bb"
     end
   end
 
