@@ -5,21 +5,21 @@
 class Pixeldrain < Formula
   desc "Share files with decentralized cloud storage."
   homepage "https://jkawamoto.github.io/go-pixeldrain/"
-  version "0.5.2"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.5.2/pd_0.5.2_darwin_arm64.tar.gz"
-      sha256 "fa1fe9e12d80754fb592877c1bb868e06af02eeb7d7d6680d2d24ef00062531d"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.6.0/pd_0.6.0_darwin_arm64.tar.gz"
+      sha256 "f6658dfe4b049ea8e74c869976bbd0df05035a65d3d3fdff09c19cb186304c4d"
 
       def install
         bin.install "pd"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.5.2/pd_0.5.2_darwin_amd64.tar.gz"
-      sha256 "af6f545c34e43adde9bf9329432e6b1c582450a4674e56b8960fcf597394fe13"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.6.0/pd_0.6.0_darwin_amd64.tar.gz"
+      sha256 "c7d21e171ab23d84928bb90d19cf840c54884ad8c59aa2dabc4b18a0fba83c8f"
 
       def install
         bin.install "pd"
@@ -29,16 +29,16 @@ class Pixeldrain < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.5.2/pd_0.5.2_linux_arm64.tar.gz"
-      sha256 "fef56ffbe1a2870568097a177ce1866435819634efaf90eeceba1bce428af2bb"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.6.0/pd_0.6.0_linux_arm64.tar.gz"
+      sha256 "4bc73650a9b798419cd6c107d90778935e3cf3710b68ba0fb1ffee7715d45033"
 
       def install
         bin.install "pd"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.5.2/pd_0.5.2_linux_amd64.tar.gz"
-      sha256 "c67ed64a578de099fa4a08b20763bc6e8ba617aa5041ffd40366c9ca4923e21d"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.6.0/pd_0.6.0_linux_amd64.tar.gz"
+      sha256 "1dc4885519321e7ab8afdbb7c910485d009543030ebe3d3fc914ba7e05b906d2"
 
       def install
         bin.install "pd"
