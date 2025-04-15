@@ -5,21 +5,21 @@
 class Pixeldrain < Formula
   desc "Share files with decentralized cloud storage."
   homepage "https://jkawamoto.github.io/go-pixeldrain/"
-  version "0.7.3"
+  version "0.7.4"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.3/pd_0.7.3_darwin_amd64.tar.gz"
-      sha256 "a6bea95f7d529eb497c88d9c25d2ce0245fa79bf53330b22d0134890684cecfa"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.4/pd_0.7.4_darwin_amd64.tar.gz"
+      sha256 "4bc5854a0e69624e11212c3ff7795695fde0e08103e44514a2eccd89e6e9fcf3"
 
       def install
         bin.install "pd"
       end
     end
     on_arm do
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.3/pd_0.7.3_darwin_arm64.tar.gz"
-      sha256 "3dc361b949067d521129a87919de0c6e5e470447ac22ded4206e48cac152975e"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.4/pd_0.7.4_darwin_arm64.tar.gz"
+      sha256 "dded048159d673b1a21b8a272dc147a81e1a8dbca21c5c650cc89333248677af"
 
       def install
         bin.install "pd"
@@ -30,8 +30,8 @@ class Pixeldrain < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.3/pd_0.7.3_linux_amd64.tar.gz"
-        sha256 "1fda5df4ce31adf05e9b3aaf1aa1fd08bfb772bcd6f703fdbadb09722d89a129"
+        url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.4/pd_0.7.4_linux_amd64.tar.gz"
+        sha256 "76e899c5a8d1344e52baada12f1619275c652054d081f993861caf6b0e6c6a1e"
 
         def install
           bin.install "pd"
@@ -40,8 +40,8 @@ class Pixeldrain < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.3/pd_0.7.3_linux_arm64.tar.gz"
-        sha256 "0bccd34a5d097fd033a53231773b21411190db98a5d48d4ef15db1054ab0e881"
+        url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.4/pd_0.7.4_linux_arm64.tar.gz"
+        sha256 "d9881818a1d03961e755bdd6a8d4c2c5b4c3d3dd3a1c89322a8e2f4cbfb20302"
 
         def install
           bin.install "pd"
