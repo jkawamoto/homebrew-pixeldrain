@@ -5,21 +5,21 @@
 class Pixeldrain < Formula
   desc "Share files with decentralized cloud storage."
   homepage "https://jkawamoto.github.io/go-pixeldrain/"
-  version "0.7.4"
+  version "0.7.5"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.4/pd_0.7.4_darwin_amd64.tar.gz"
-      sha256 "4bc5854a0e69624e11212c3ff7795695fde0e08103e44514a2eccd89e6e9fcf3"
+    if Hardware::CPU.intel?
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.5/pd_0.7.5_darwin_amd64.tar.gz"
+      sha256 "62c1021a533c3b68b33138712b55829d923d194b98f74922aa3d5e88f10e726a"
 
       def install
         bin.install "pd"
       end
     end
-    on_arm do
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.4/pd_0.7.4_darwin_arm64.tar.gz"
-      sha256 "dded048159d673b1a21b8a272dc147a81e1a8dbca21c5c650cc89333248677af"
+    if Hardware::CPU.arm?
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.5/pd_0.7.5_darwin_arm64.tar.gz"
+      sha256 "0d05be4f365c1fd6760993b168bf3e6ccf5bf1bdc114f327039ca522b9f061bb"
 
       def install
         bin.install "pd"
@@ -28,24 +28,18 @@ class Pixeldrain < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.4/pd_0.7.4_linux_amd64.tar.gz"
-        sha256 "76e899c5a8d1344e52baada12f1619275c652054d081f993861caf6b0e6c6a1e"
-
-        def install
-          bin.install "pd"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.5/pd_0.7.5_linux_amd64.tar.gz"
+      sha256 "9ddaf5b7bbb8760624330a682509874707e907a2df56f633e94e99a6ecfdac1f"
+      def install
+        bin.install "pd"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.4/pd_0.7.4_linux_arm64.tar.gz"
-        sha256 "d9881818a1d03961e755bdd6a8d4c2c5b4c3d3dd3a1c89322a8e2f4cbfb20302"
-
-        def install
-          bin.install "pd"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.7.5/pd_0.7.5_linux_arm64.tar.gz"
+      sha256 "9bbd6aa9a1c372a194282cfd64fa5748432d89fa80f05a81275bbfbd18b946ee"
+      def install
+        bin.install "pd"
       end
     end
   end
