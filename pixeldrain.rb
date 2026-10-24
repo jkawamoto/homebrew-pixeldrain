@@ -5,21 +5,21 @@
 class Pixeldrain < Formula
   desc "Share files with decentralized cloud storage."
   homepage "https://jkawamoto.github.io/go-pixeldrain/"
-  version "0.8.1"
+  version "0.9.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.8.1/pd_0.8.1_darwin_amd64.tar.gz"
-      sha256 "6728e13585a56478e149e40c0183e751f8b5bc35adeaefa45da0196b2c452737"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.9.0/pd_0.9.0_darwin_amd64.tar.gz"
+      sha256 "23ddf32aad527f3682497be92f8efffcea1c4d690d9ac29b4dce76207ab4576c"
 
       define_method(:install) do
         bin.install "pd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.8.1/pd_0.8.1_darwin_arm64.tar.gz"
-      sha256 "f3a1171bf371757028418a8ba86545addeeac857453cf6ff58cacc831a49a82c"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.9.0/pd_0.9.0_darwin_arm64.tar.gz"
+      sha256 "3e428a71fff1c339ad559941775c380fbad25f8c9ef23574a781d0b6032f97b5"
 
       define_method(:install) do
         bin.install "pd"
@@ -29,15 +29,15 @@ class Pixeldrain < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.8.1/pd_0.8.1_linux_amd64.tar.gz"
-      sha256 "525051c41f2193c031944dd73c3ce7f1bc49c974b8fe963a977b773efe85bc2d"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.9.0/pd_0.9.0_linux_amd64.tar.gz"
+      sha256 "f7846114b28d1fecd422206ebd2b5143bb5256cc72189b070a8bf6e44028b1ed"
       define_method(:install) do
         bin.install "pd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.8.1/pd_0.8.1_linux_arm64.tar.gz"
-      sha256 "5b5eea49b1526e239ed0f9a87845efee79afcc35cce43ed4efb2babe79aa3274"
+      url "https://github.com/jkawamoto/go-pixeldrain/releases/download/v0.9.0/pd_0.9.0_linux_arm64.tar.gz"
+      sha256 "249ea898c213a349b180823929bfa3ec88f191452645d1b7d4c0ae0d3cc81031"
       define_method(:install) do
         bin.install "pd"
       end
